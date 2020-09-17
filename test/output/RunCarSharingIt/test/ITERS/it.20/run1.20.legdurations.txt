@@ -1,0 +1,14 @@
+pattern	0+	5+	10+	15+	20+	25+	30+	35+	40+	45+	50+	55+	60+
+freefloating interaction---freefloating interaction	1	1	0	0	0	0	0	0	0	0	0	0	0
+freefloating interaction---h	1	0	0	0	0	0	0	0	0	0	0	0	0
+freefloating interaction---w	1	0	0	0	0	0	0	0	0	0	0	0	0
+h---freefloating interaction	1	0	0	0	0	0	0	0	0	0	0	0	0
+h---twoway interaction	2	0	0	0	0	0	0	0	0	0	0	0	0
+h---w	0	4	0	0	0	0	0	0	1	0	0	0	0
+twoway interaction---h	2	0	0	0	0	0	0	0	0	0	0	0	0
+twoway interaction---w	2	0	0	0	0	0	0	0	0	0	0	0	0
+w---freefloating interaction	1	0	0	0	0	0	0	0	0	0	0	0	0
+w---h	0	4	0	0	0	0	0	0	1	0	0	0	0
+w---twoway interaction	2	0	0	0	0	0	0	0	0	0	0	0	0
+
+average trip duration: 425.4583333333333 seconds = 00:07:05

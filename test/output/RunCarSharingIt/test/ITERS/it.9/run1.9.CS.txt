@@ -1,0 +1,5 @@
+personID,carsharingType,startTime,endTIme,startLink,pickupLink,dropoffLink,endLink,startCoordX,startCoordY,pickupCoordX,pickupCoordY,dropoffCoordX,dropoffCoordY,endCoordX,endCoordY,distance,inVehicleTime,accessTime,egressTime,vehicleID,companyID,vehicleType
+1,twoway,28803.0,58370.0,12,2,2,14,-375.0,0.0,-375.0,0.0,-375.0,0.0,1250.0,0.0,4000.0,766.0,1.0,0.0,TW_1,Mobility,car
+101,twoway,29163.0,58730.0,15,5,5,16,0.0,375.0,0.0,375.0,0.0,375.0,1000.0,250.0,4000.0,766.0,1.0,0.0,TW_3,Mobility,car
+104,twoway,29174.0,59450.0,15,5,5,16,0.0,375.0,0.0,375.0,0.0,375.0,1000.0,250.0,4000.0,1475.0,1.0,0.0,TW_4,Mobility,car
+10,twoway,28836.0,59090.0,12,2,2,14,-375.0,0.0,-375.0,0.0,-375.0,0.0,1250.0,0.0,4000.0,1453.0,1.0,0.0,TW_2,Mobility,car

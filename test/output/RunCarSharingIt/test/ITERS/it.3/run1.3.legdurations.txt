@@ -1,0 +1,7 @@
+pattern	0+	5+	10+	15+	20+	25+	30+	35+	40+	45+	50+	55+	60+
+h---twoway interaction	4	0	0	0	0	0	0	0	0	0	0	0	0
+twoway interaction---h	4	0	0	0	0	0	0	0	0	0	0	0	0
+twoway interaction---w	2	0	0	2	0	0	0	0	0	0	0	0	0
+w---twoway interaction	4	0	0	0	0	0	0	0	0	0	0	0	0
+
+average trip duration: 190.0 seconds = 00:03:10
