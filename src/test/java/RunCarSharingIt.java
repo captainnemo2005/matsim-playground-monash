@@ -23,7 +23,6 @@ import org.matsim.core.replanning.modules.SubtourModeChoice;
 import org.matsim.core.scenario.ScenarioUtils;
 import org.matsim.testcases.MatsimTestUtils;
 
-//import static org.matsim.core.config.groups.PlansCalcRouteConfigGroup.AccessEgressType;
 public class RunCarSharingIt {
 
     private final static Logger log = Logger.getLogger(RunCarSharingIt.class);
