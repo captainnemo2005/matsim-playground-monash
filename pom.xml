@@ -80,6 +80,13 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math3</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+
+
         <!--some contribs:-->
 
 
@@ -107,6 +114,12 @@
             <groupId>org.matsim.contrib</groupId>
             <artifactId>carsharing</artifactId>
             <version>${matsim.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.matsim</groupId>
+            <artifactId>matsim-examples</artifactId>
+            <version>13.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
         <!--Dependencies from where stated above to here are added as a service; they can be removed if you don't need them-->
 
