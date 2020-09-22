@@ -1,7 +1,7 @@
 package module.config;
 
 import model.DiscreteModeChoiceModel;
-import module.ModelModule;
+import module.*;
 import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigGroup;
 import org.matsim.core.config.ReflectiveConfigGroup;

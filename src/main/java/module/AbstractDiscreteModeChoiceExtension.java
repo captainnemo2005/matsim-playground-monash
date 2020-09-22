@@ -1,5 +1,6 @@
 package module;
 
+import com.google.inject.binder.LinkedBindingBuilder;
 import com.google.inject.multibindings.MapBinder;
 import org.matsim.core.controler.AbstractModule;
 
@@ -38,6 +39,45 @@ public abstract class AbstractDiscreteModeChoiceExtension extends AbstractModule
         homeFinderBinder = MapBinder.newMapBinder(binder(), String.class, HomeFinder.class);
 
         installExtension();
+    }
+    protected final LinkedBindingBuilder<TourEstimator> bindTourEstimator(String name) {
+        return tourEstimatorBinder.addBinding(name);
+    }
+
+    protected final LinkedBindingBuilder<TripEstimator> bindTripEstimator(String name) {
+        return tripEstimatorBinder.addBinding(name);
+    }
+
+    protected final LinkedBindingBuilder<TourFilter> bindTourFilter(String name) {
+        return tourFilterBinder.addBinding(name);
+    }
+
+    protected final LinkedBindingBuilder<TripFilter> bindTripFilter(String name) {
+        return tripFilterBinder.addBinding(name);
+    }
+
+    protected final LinkedBindingBuilder<TourConstraintFactory> bindTourConstraintFactory(String name) {
+        return tourConstraintFactoryBinder.addBinding(name);
+    }
+
+    protected final LinkedBindingBuilder<TripConstraintFactory> bindTripConstraintFactory(String name) {
+        return tripConstraintFactoryBinder.addBinding(name);
+    }
+
+    protected final LinkedBindingBuilder<UtilitySelectorFactory> bindSelectorFactory(String name) {
+        return selectorFactory.addBinding(name);
+    }
+
+    protected final LinkedBindingBuilder<ModeAvailability> bindModeAvailability(String name) {
+        return modeAvailabilityBinder.addBinding(name);
+    }
+
+    protected final LinkedBindingBuilder<TourFinder> bindTourFinder(String name) {
+        return tourFinderBinder.addBinding(name);
+    }
+
+    protected final LinkedBindingBuilder<HomeFinder> bindHomeFinder(String name) {
+        return homeFinderBinder.addBinding(name);
     }
 
     abstract protected void installExtension();

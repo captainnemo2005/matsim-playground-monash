@@ -3,8 +3,6 @@ package model;
 public interface DiscreteModeChoiceModel {
 
 
-
-
     static public enum FallbackBehaviour {
         IGNORE_AGENT, INITIAL_CHOICE, EXCEPTION
     }
