@@ -1,2 +1,6 @@
-package PlayingWithDIntoProvider;public interface Discountable {
+package PlayingWithDIntoProvider;
+
+public interface Discountable {
+
+    double getDiscount();
 }
