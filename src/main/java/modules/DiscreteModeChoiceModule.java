@@ -2,7 +2,11 @@ package modules;
 
 import com.google.inject.Inject;
 import modules.config.DiscreteModeChoiceConfigGroup;
+import modules.utils.ModeChoiceInTheLoopChecker;
 import org.matsim.core.controler.AbstractModule;
+import replanning.DiscreteModeChoiceStrategyProvider;
+import replanning.NonSelectedPlanSelector;
+import replanning.time_interpreter.TimeInterpreterModule;
 
 public class DiscreteModeChoiceModule extends AbstractModule {
 

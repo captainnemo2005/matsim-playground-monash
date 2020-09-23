@@ -1,7 +1,7 @@
 package modules.config;
 
-import java.util.Collection;
-import java.util.HashSet;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class SubtourModeConstraintConfigGroup extends ComponentConfigGroup {
     private Collection<String> constrainedModes = new HashSet<>();
@@ -12,5 +12,32 @@ public class SubtourModeConstraintConfigGroup extends ComponentConfigGroup {
         super(componentType, componentName);
     }
 
+    @Override
+    public Map<String, String> getComments() {
+        Map<String, String> comments = new HashMap<>();
 
+        comments.put(CONSTRAINED_MODES,
+                "Modes for which the sub-tour behaviour should be replicated. If all available modes are put here, this equals to SubTourModeChoice with singleLegProbability == 0.0; if only the constrained modes are put here, it equals singleLegProbability > 0.0");
+
+        return comments;
+    }
+
+    public void setConstrainedModes(Collection<String> contrainedModes) {
+        this.constrainedModes = new HashSet<>(constrainedModes);
+    }
+
+    public Collection<String> getConstrainedModes() {
+        return constrainedModes;
+    }
+
+    @StringSetter(CONSTRAINED_MODES)
+    public void setConstrainedModesAsString(String constrainedModes) {
+        this.constrainedModes = Arrays.asList(constrainedModes.split(",")).stream().map(String::trim)
+                .collect(Collectors.toSet());
+    }
+
+    @StringGetter(CONSTRAINED_MODES)
+    public String getConstrainedModesAsString() {
+        return String.join(", ", constrainedModes);
+    }
 }
