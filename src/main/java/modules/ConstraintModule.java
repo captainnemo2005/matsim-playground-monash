@@ -90,9 +90,9 @@ public class ConstraintModule extends AbstractDiscreteModeChoiceExtension {
         CompositeTripConstraintFactory factory = new CompositeTripConstraintFactory();
 
         for (String name : names) {
-            factory.addFactory(getTripConstraintFactory(name, components));
+            factory.addFactory((components.constraints.TripConstraintFactory) getTripConstraintFactory(name, components));
         }
-        return factory;
+        return (TripConstraintFactory) factory;
     }
 
     @Provides
