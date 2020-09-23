@@ -2,8 +2,15 @@ package modules;
 
 import com.google.inject.binder.LinkedBindingBuilder;
 import com.google.inject.multibindings.MapBinder;
+import components.tour_finder.TourFinder;
+import components.utils.HomeFinder;
+import model.tour_based.TourConstraintFactory;
+import model.tour_based.TourEstimator;
+import model.tour_based.TourFilter;
+import model.tour_based.TripFilter;
 import model.trip_based.TripConstraintFactory;
 import model.trip_based.TripEstimator;
+import model.utilities.UtilitySelectorFactory;
 import modules.model_availability.ModeAvailability;
 import org.matsim.core.controler.AbstractModule;
 

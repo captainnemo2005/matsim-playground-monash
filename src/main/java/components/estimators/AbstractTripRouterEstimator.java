@@ -2,6 +2,7 @@ package components.estimators;
 
 import model.DiscreteModeChoiceTrip;
 import model.trip_based.TripEstimator;
+import model.trip_based.candidates.DefaultRoutedTripCandidate;
 import model.trip_based.candidates.TripCandidate;
 import org.matsim.api.core.v01.population.Leg;
 import org.matsim.api.core.v01.population.Person;
@@ -45,7 +46,9 @@ public abstract class AbstractTripRouterEstimator implements TripEstimator {
     }
 
     @Override
-    public final TripCandidate estimateTrip(Person person, String mode, DiscreteModeChoiceTrip trip,
+    public final TripCandidate estimateTrip(Person person,
+                                            String mode,
+                                            DiscreteModeChoiceTrip trip,
                                             List<TripCandidate> previousTrips) {
         // I) Find the correct origin and destination facilities
 
