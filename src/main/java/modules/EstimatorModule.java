@@ -1,4 +1,4 @@
-package module;
+package modules;
 
 import org.matsim.pt.config.TransitConfigGroup;
 

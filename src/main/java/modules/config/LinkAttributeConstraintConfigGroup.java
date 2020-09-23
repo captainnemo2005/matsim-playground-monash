@@ -1,10 +1,12 @@
-package module.config;
+package modules.config;
+
+import components.constraints.LinkAttributeConstraint;
 
 import java.util.Collection;
 import java.util.HashSet;
 
 public class LinkAttributeConstraintConfigGroup extends ComponentConfigGroup{
-    private Requirement requirement = Requirement.BOTH;
+    private LinkAttributeConstraint.Requirement requirement = LinkAttributeConstraint.Requirement.BOTH;
     private String attributeName = null;
     private String attributeValue = null;
     private Collection<String> constrainedModes = new HashSet<>();

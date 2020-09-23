@@ -1,7 +1,7 @@
-package module.config;
+package modules.config;
 
 import model.DiscreteModeChoiceModel;
-import module.*;
+import modules.*;
 import org.matsim.core.config.Config;
 import org.matsim.core.config.ConfigGroup;
 import org.matsim.core.config.ReflectiveConfigGroup;
@@ -417,7 +417,7 @@ public class DiscreteModeChoiceConfigGroup extends ReflectiveConfigGroup {
     public Map<String, String> getComments() {
         Map<String, String> comments = new HashMap<>();
 
-        String options = Arrays.asList(ModelType.values()).stream().map(String::valueOf)
+        String options = Arrays.asList(ModelModule.ModelType.values()).stream().map(String::valueOf)
                 .collect(Collectors.joining(", "));
         comments.put(MODEL_TYPE, "Main model type: " + options);
 
@@ -426,7 +426,7 @@ public class DiscreteModeChoiceConfigGroup extends ReflectiveConfigGroup {
         comments.put(ENFORCE_SINGLE_PLAN,
                 "Defines whether to run a runtime check that verifies that everything is set up correctl for a 'mode-choice-in-the-loop' setup.");
 
-        options = Arrays.asList(FallbackBehaviour.values()).stream().map(String::valueOf)
+        options = Arrays.asList(DiscreteModeChoiceModel.FallbackBehaviour.values()).stream().map(String::valueOf)
                 .collect(Collectors.joining(", "));
         comments.put(FALLBACK_BEHAVIOUR,
                 "Defines what happens if there is no feasible choice alternative for an agent: " + options);

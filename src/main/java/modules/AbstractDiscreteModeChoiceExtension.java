@@ -1,4 +1,4 @@
-package module;
+package modules;
 
 import com.google.inject.binder.LinkedBindingBuilder;
 import com.google.inject.multibindings.MapBinder;

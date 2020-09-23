@@ -1,4 +1,4 @@
-package module.config;
+package modules.config;
 
 public class MultinomialLogitSelectorConfigGroup extends ComponentConfigGroup{
     private double minimumUtility = -700.0;

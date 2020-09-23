@@ -1,4 +1,4 @@
-package module.config;
+package modules.config;
 
 import java.util.Arrays;
 import java.util.Collection;

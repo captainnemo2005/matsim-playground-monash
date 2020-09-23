@@ -81,7 +81,7 @@
 		<param name="lastIteration" value="20" />
 		<!-- Defines which mobility simulation will be used. Currently supported: qsim JDEQSim hermes 
 		Depending on the chosen mobsim, you'll have to add additional config modules to configure the corresponding mobsim.
-		For 'qsim', add a module 'qsim' to the config. -->
+		For 'qsim', add a modules 'qsim' to the config. -->
 		<param name="mobsim" value="qsim" />
 		<param name="outputDirectory" value="test/output/RunCarSharingIt/test/" />
 		<!-- Possible values: failIfDirectoryExists, overwriteExistingFiles, deleteDirectoryIfExists -->
@@ -102,7 +102,7 @@
 		<param name="writeTripsInterval" value="10" />
 	</module>
 	<module name="counts" >
-		<!-- Transport modes that will be respected for the counts comparison. 'car' is default, which includes also bussed from the pt simulation module. Use this parameter in combination with 'filterModes' = true! -->
+		<!-- Transport modes that will be respected for the counts comparison. 'car' is default, which includes also bussed from the pt simulation modules. Use this parameter in combination with 'filterModes' = true! -->
 		<param name="analyzedModes" value="car" />
 		<!-- Specifies over how many iterations the link volumes should be averaged that are used for the counts comparison. Use 1 or 0 to only use the link volumes of a single iteration. This values cannot be larger than the value specified for writeCountsInterval -->
 		<param name="averageCountsOverIterations" value="5" />
@@ -725,7 +725,7 @@
 		<param name="searchRadius" value="1000.0" />
 	</module>
 	<module name="travelTimeCalculator" >
-		<!-- (only for backwards compatibility; only used if separateModes==false && + filterModes==true)  Transport modes that will be respected by the travel time collector. 'car' is default which includes also buses from the pt simulation module. -->
+		<!-- (only for backwards compatibility; only used if separateModes==false && + filterModes==true)  Transport modes that will be respected by the travel time collector. 'car' is default which includes also buses from the pt simulation modules. -->
 		<param name="analyzedModes" value="car" />
 		<param name="calculateLinkToLinkTravelTimes" value="false" />
 		<param name="calculateLinkTravelTimes" value="true" />

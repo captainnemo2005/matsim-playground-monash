@@ -1,6 +1,4 @@
-package module;
-
-import org.matsim.core.controler.AbstractModule;
+package modules;
 
 import java.util.Arrays;
 import java.util.Collection;

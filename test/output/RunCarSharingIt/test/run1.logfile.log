@@ -15,12 +15,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE config SYSTEM "http://www.matsim.org/files/dtd/config_v2.dtd">
 <config>
-	<module name="Carsharing" >
+	<modules name="Carsharing" >
 		<param name="membership" value="/Users/cptnemo2005/IdeaProjects/matsim-examples-tri/src/test/input/CSMembership.xml" />
 		<param name="statsWriterFrequency" value="1" />
 		<param name="vehiclelocations" value="/Users/cptnemo2005/IdeaProjects/matsim-examples-tri/src/test/input/CarsharingStations.xml" />
-	</module>
-	<module name="FreeFloating" >
+	</modules>
+	<modules name="FreeFloating" >
 		<param name="areasFreefloating" value="freefloating_areas.xml" />
 		<param name="constantFreeFloating" value="-0.0" />
 		<param name="distanceFeeFreeFloating" value="-0.00" />
@@ -32,8 +32,8 @@
 		<param name="travelingFreeFloating" value="-0.1" />
 		<param name="useFreeFloating" value="true" />
 		<param name="vehiclelocationsFreefloating" value="null" />
-	</module>
-	<module name="JDEQSim" >
+	</modules>
+	<modules name="JDEQSim" >
 		<param name="carSize" value="7.5" />
 		<param name="endTime" value="undefined" />
 		<param name="flowCapacityFactor" value="1.0" />
@@ -41,8 +41,8 @@
 		<param name="minimumInFlowCapacity" value="1800.0" />
 		<param name="squeezeTime" value="1800.0" />
 		<param name="storageCapacityFactor" value="1.0" />
-	</module>
-	<module name="OneWayCarsharing" >
+	</modules>
+	<modules name="OneWayCarsharing" >
 		<param name="constantOneWayCarsharing" value="-0.4" />
 		<param name="distanceFeeOneWayCarsharing" value="-0.0" />
 		<param name="rentalPriceTimeOneWayCarsharing" value="null" />
@@ -52,14 +52,14 @@
 		<param name="travelingOneWayCarsharing" value="-10.0" />
 		<param name="useOneWayCarsharing" value="true" />
 		<param name="vehiclelocationsOneWayCarsharing" value="Stations.txt" />
-	</module>
-	<module name="TimeAllocationMutator" >
+	</modules>
+	<modules name="TimeAllocationMutator" >
 		<!-- Default:true; Defines whether time mutation changes an activity's duration. -->
 		<param name="mutationAffectsDuration" value="true" />
 		<!-- Default:1800.0; Defines how many seconds a time mutation can maximally shift a time. -->
 		<param name="mutationRange" value="1800.0" />
-	</module>
-	<module name="TwoWayCarsharing" >
+	</modules>
+	<modules name="TwoWayCarsharing" >
 		<param name="constantTwoWayCarsharing" value="-0.4" />
 		<param name="distanceFeeTwoWayCarsharing" value="-0.0" />
 		<param name="rentalPriceTimeTwoWayCarsharing" value="null" />
@@ -68,16 +68,16 @@
 		<param name="travelingTwoWayCarsharing" value="-6.0" />
 		<param name="useTwoWayCarsharing" value="true" />
 		<param name="vehiclelocationsTwoWayCarsharing" value="CarsharingStations.xml" />
-	</module>
-	<module name="changeMode" >
+	</modules>
+	<modules name="changeMode" >
 		<!-- Defines whether car availability is considered be considered or not. An agent has no car only if it has no license, or never access to a car. Default: true -->
 		<param name="ignoreCarAvailability" value="true" />
 		<!-- Defines the mode switch behavior. Possible values [fromAllModesToSpecifiedModes, fromSpecifiedModesToSpecifiedModes] Default: fromSpecifiedModesToSpecifiedModes. -->
 		<param name="modeSwitchBehavior" value="fromSpecifiedModesToSpecifiedModes" />
 		<!-- Defines all the modes available, including chain-based modes, seperated by commas -->
 		<param name="modes" value="car,pt" />
-	</module>
-	<module name="controler" >
+	</modules>
+	<modules name="controler" >
 		<!-- Compression algorithm to use when writing out data to files. Possible values: [none, gzip, lz4, zst] -->
 		<param name="compressionType" value="gzip" />
 		<!-- Sets whether graphs showing some analyses should automatically be generated during the simulation. The generation of graphs usually takes a small amount of time that does not have any weight in big simulations, but add a significant overhead in smaller runs or in test cases where the graphical output is not even requested. -->
@@ -95,7 +95,7 @@
 		<param name="lastIteration" value="20" />
 		<!-- Defines which mobility simulation will be used. Currently supported: qsim JDEQSim hermes 
 		Depending on the chosen mobsim, you'll have to add additional config modules to configure the corresponding mobsim.
-		For 'qsim', add a module 'qsim' to the config. -->
+		For 'qsim', add a modules 'qsim' to the config. -->
 		<param name="mobsim" value="qsim" />
 		<param name="outputDirectory" value="test/output/RunCarSharingIt/test/" />
 		<!-- Possible values: failIfDirectoryExists, overwriteExistingFiles, deleteDirectoryIfExists -->
@@ -114,9 +114,9 @@
 		<param name="writeSnapshotsInterval" value="1" />
 		<!-- iterationNumber % writeEventsInterval == 0 defines in which iterations trips CSV are written to a file. `0' disables trips writing completely. -->
 		<param name="writeTripsInterval" value="10" />
-	</module>
-	<module name="counts" >
-		<!-- Transport modes that will be respected for the counts comparison. 'car' is default, which includes also bussed from the pt simulation module. Use this parameter in combination with 'filterModes' = true! -->
+	</modules>
+	<modules name="counts" >
+		<!-- Transport modes that will be respected for the counts comparison. 'car' is default, which includes also bussed from the pt simulation modules. Use this parameter in combination with 'filterModes' = true! -->
 		<param name="analyzedModes" value="car" />
 		<!-- Specifies over how many iterations the link volumes should be averaged that are used for the counts comparison. Use 1 or 0 to only use the link volumes of a single iteration. This values cannot be larger than the value specified for writeCountsInterval -->
 		<param name="averageCountsOverIterations" value="5" />
@@ -136,8 +136,8 @@
 		<param name="outputformat" value="txt" />
 		<!-- Specifies how often the counts comparison should be calculated and written. -->
 		<param name="writeCountsInterval" value="10" />
-	</module>
-	<module name="dvrp" >
+	</modules>
+	<modules name="dvrp" >
 		<!-- Mode of which the network will be used for throwing events and hence calculating travel times. Default is car. -->
 		<param name="mobsimMode" value="car" />
 		<!-- Set of modes of which the network will be used for DVRP travel time estimation and routing DVRP vehicles. Each specific DVRP mode may use a subnetwork of this network for routing vehicles (e.g. DRT buses travelling only along a specified links or serving a limited area). Default is "car" (i.e. single-element set of modes), i.e. the car network is used. Empty value "" (i.e. empty set of modes) means no network filtering, i.e. the original scenario.network is used -->
@@ -146,8 +146,8 @@
 		<param name="travelTimeEstimationAlpha" value="0.05" />
 		<!-- Used for ONLINE estimation of travel times for VrpOptimizer by combining WithinDayTravelTime and DvrpOfflineTravelTimeEstimator. The beta coefficient is provided in seconds and should be either 0 (no online estimation) or positive (mixed online-offline estimation). For 'beta = 0', only the offline estimate is used: 'onlineTT(t) = offlineTT(t)', where 'offlineTT(t)' in the offline estimate for TT at time 't', For 'beta > 0', estimating future TTs at time 't', uses the currently observed TT to correct the offline estimates is made: where 'currentTT' is the currently observed TT, and 'correction = min(1, max(0, 1 - (time - currentTime) / beta))' The rule is that correction decreases linearly from 1 (when 'time = currentTime') to 0 (when 'time = currentTime + beta' For 'time > currentTime + beta' correction is 0, whereas if 'time < currentTime' it is 1. If beta is sufficiently large, 'beta >> 0', only the currently observed TT is used. -->
 		<param name="travelTimeEstimationBeta" value="0.0" />
-	</module>
-	<module name="facilities" >
+	</modules>
+	<modules name="facilities" >
 		<!-- This defines how facilities should be created. Possible values: none fromFile setInScenario onePerActivityLinkInPlansFile onePerActivityLinkInPlansFileExceptWhenCoordinatesAreGiven onePerActivityLocationInPlansFile  -->
 		<param name="facilitiesSource" value="fromFile" />
 		<!-- A prefix to be used for auto-generated IDs. -->
@@ -157,16 +157,16 @@
 		<param name="inputFacilitiesFile" value="/Users/cptnemo2005/IdeaProjects/matsim-examples-tri/src/test/input/facilities.xml" />
 		<param name="inputFacilityAttributesFile" value="null" />
 		<param name="insistingOnUsingDeprecatedFacilitiesAttributeFile" value="false" />
-	</module>
-	<module name="global" >
+	</modules>
+	<modules name="global" >
 		<param name="coordinateSystem" value="Atlantis" />
 		<param name="defaultDelimiter" value=";" />
 		<param name="insistingOnDeprecatedConfigVersion" value="true" />
 		<!-- "global" number of threads.  This number is used, e.g., for replanning, but NOT in QSim.  This can typically be set to as many cores as you have available, or possibly even slightly more. -->
 		<param name="numberOfThreads" value="4" />
 		<param name="randomSeed" value="4711" />
-	</module>
-	<module name="hermes" >
+	</modules>
+	<modules name="hermes" >
 		<!-- Simulation End Time -->
 		<param name="endTime" value="30:00:00" />
 		<param name="flowCapacityFactor" value="1.0" />
@@ -176,27 +176,27 @@
 		<param name="stuckTime" value="10" />
 		<!-- treats PT as deterministic. PT vehicles will run with a steady speed. Should be used with separate network layers for PT and other network modes. -->
 		<param name="useDeterministicPt" value="false" />
-	</module>
-	<module name="households" >
+	</modules>
+	<modules name="households" >
 		<param name="inputFile" value="null" />
 		<param name="inputHouseholdAttributesFile" value="null" />
 		<param name="insistingOnUsingDeprecatedHouseholdsAttributeFile" value="false" />
-	</module>
-	<module name="linkStats" >
+	</modules>
+	<modules name="linkStats" >
 		<!-- Specifies over how many iterations the link volumes should be averaged that are used for the link statistics. Use 1 or 0 to only use the link volumes of a single iteration. This values cannot be larger than the value specified for writeLinkStatsInterval -->
 		<param name="averageLinkStatsOverIterations" value="5" />
 		<!-- Specifies how often the link stats should be calculated and written. Use 0 to disable the generation of link stats. -->
 		<param name="writeLinkStatsInterval" value="10" />
-	</module>
-	<module name="network" >
+	</modules>
+	<modules name="network" >
 		<!-- The Coordinates Reference System in which the coordinates are expressed in the input file. At import, the coordinates will be converted to the coordinate system defined in "global", and willbe converted back at export. If not specified, no conversion happens. -->
 		<param name="inputCRS" value="null" />
 		<param name="inputChangeEventsFile" value="null" />
 		<param name="inputNetworkFile" value="/Users/cptnemo2005/IdeaProjects/matsim-examples-tri/src/test/input/network.xml" />
 		<param name="laneDefinitionsFile" value="null" />
 		<param name="timeVariantNetwork" value="false" />
-	</module>
-	<module name="parallelEventHandling" >
+	</modules>
+	<modules name="parallelEventHandling" >
 		<!-- Estimated number of events during mobsim run. An optional optimization hint for the framework. -->
 		<param name="estimatedNumberOfEvents" value="null" />
 		<!-- Size of the events Queue. Increase for very large scenarios -->
@@ -207,8 +207,8 @@
 		<param name="oneThreadPerHandler" value="false" />
 		<!-- If enabled, it is ensured that all events that are created during a time step of the mobility simulation are processed before the next time step is simulated. E.g. neccessary when within-day replanning is used. -->
 		<param name="synchronizeOnSimSteps" value="true" />
-	</module>
-	<module name="planCalcScore" >
+	</modules>
+	<modules name="planCalcScore" >
 		<!-- logit model scale parameter. default: 1.  Has name and default value for historical reasons (see Bryan Raney's phd thesis). -->
 		<param name="BrainExpBeta" value="2.0" />
 		<param name="PathSizeLogitBeta" value="1.0" />
@@ -529,8 +529,8 @@
 				<param name="monetaryDistanceRate" value="0.0" />
 			</parameterset>
 		</parameterset>
-	</module>
-	<module name="plans" >
+	</modules>
+	<modules name="plans" >
 		<!-- String: minOfDurationAndEndTime tryEndTimeThenDuration endTimeOnly. Anything besides minOfDurationAndEndTime will internally use a different (simpler) version of the TimeAllocationMutator. -->
 		<param name="activityDurationInterpretation" value="tryEndTimeThenDuration" />
 		<!-- Possible values: reject, useMainModeIdentifier -->
@@ -544,8 +544,8 @@
 		<param name="networkRouteType" value="LinkNetworkRoute" />
 		<!-- (not tested) will remove plan attributes that are presumably not used, such as activityStartTime. default=false. Use with Caution! -->
 		<param name="removingUnnecessaryPlanAttributes" value="false" />
-	</module>
-	<module name="planscalcroute" >
+	</modules>
+	<modules name="planscalcroute" >
 		<!-- Some typical teleportation routing params are set by default, such as for walk and bike.  Setting this switch to "true" will clear them.  Note that this will also clear settings for helper modes such as for non_network_walk -->
 		<param name="clearDefaultTeleportedModeParams" value="false" />
 		<!-- All the modes for which the router is supposed to generate network routes (like car) -->
@@ -584,8 +584,8 @@
 			<param name="teleportedModeFreespeedFactor" value="null" />
 			<param name="teleportedModeSpeed" value="0.833333333333333" />
 		</parameterset>
-	</module>
-	<module name="ptCounts" >
+	</modules>
+	<modules name="ptCounts" >
 		<!-- factor by which to re-scale the simulated values.  necessary when simulation runs with something different from 100%.  needs to be adapted manually -->
 		<param name="countsScaleFactor" value="1.0" />
 		<!-- distance to distanceFilterCenterNode to include counting stations. The unit of distance is the Euclidean distance implied by the coordinate system -->
@@ -602,8 +602,8 @@
 		<param name="outputformat" value="null" />
 		<!-- every how many iterations (starting with 0) counts comparisons are generated -->
 		<param name="ptCountsInterval" value="10" />
-	</module>
-	<module name="qsim" >
+	</modules>
+	<modules name="qsim" >
 		<param name="endTime" value="00:00:00" />
 		<param name="flowCapacityFactor" value="1.0" />
 		<!-- decides if waiting vehicles enter the network after or before the already driving vehicles were moved. Default: false -->
@@ -650,8 +650,8 @@
 		<param name="vehicleBehavior" value="teleport" />
 		<!-- If vehicles should all be the same default vehicle, or come from the vehicles file, or something else.  Possible values:  defaultVehicle modeVehicleTypesFromVehiclesData fromVehiclesData -->
 		<param name="vehiclesSource" value="defaultVehicle" />
-	</module>
-	<module name="strategy" >
+	</modules>
+	<modules name="strategy" >
 		<!-- the external executable will be called with a config file as argument.  This is the pathname to a possible skeleton config, to which additional information will be added.  Can be null. -->
 		<param name="ExternalExeConfigTemplate" value="null" />
 		<!-- time out value (in seconds) after which matsim will consider the external strategy as failed -->
@@ -697,8 +697,8 @@
 			<param name="subpopulation" value="null" />
 			<param name="weight" value="1.0" />
 		</parameterset>
-	</module>
-	<module name="subtourModeChoice" >
+	</modules>
+	<modules name="subtourModeChoice" >
 		<!-- Only for backwards compatibility.  Defines if only trips from modes list should change mode, or all trips.  Options: fromAllModesToSpecifiedModes fromSpecifiedModesToSpecifiedModes  -->
 		<param name="behavior" value="fromAllModesToSpecifiedModes" />
 		<!-- Defines the chain-based modes, seperated by commas -->
@@ -707,8 +707,8 @@
 		<param name="considerCarAvailability" value="true" />
 		<!-- Defines all the modes available, including chain-based modes, seperated by commas -->
 		<param name="modes" value="car,bike,pt,walk" />
-	</module>
-	<module name="transit" >
+	</modules>
+	<modules name="transit" >
 		<!-- The Coordinates Reference System in which the coordinates are expressed in the input file. At import, the coordinates will be converted to the coordinate system defined in "global", and willbe converted back at export. If not specified, no conversion happens. -->
 		<param name="inputScheduleCRS" value="null" />
 		<param name="insistingOnUsingDeprecatedAttributeFiles" value="false" />
@@ -725,8 +725,8 @@
 		<param name="usingTransitInMobsim" value="true" />
 		<!-- Input file containing the vehicles used by the departures in the transit schedule. -->
 		<param name="vehiclesFile" value="null" />
-	</module>
-	<module name="transitRouter" >
+	</modules>
+	<modules name="transitRouter" >
 		<!-- additional time the router allocates when a line switch happens. Can be interpreted as a 'safety' time that agents need to safely transfer from one line to another -->
 		<param name="additionalTransferTime" value="0.0" />
 		<!-- Factor with which direct walk generalized cost is multiplied before it is compared to the pt generalized cost.  Set to a very high value to reduce direct walk results. -->
@@ -737,9 +737,9 @@
 		<param name="maxBeelineWalkConnectionDistance" value="100.0" />
 		<!-- the radius in which stop locations are searched, given a start or target coordinate -->
 		<param name="searchRadius" value="1000.0" />
-	</module>
-	<module name="travelTimeCalculator" >
-		<!-- (only for backwards compatibility; only used if separateModes==false && + filterModes==true)  Transport modes that will be respected by the travel time collector. 'car' is default which includes also buses from the pt simulation module. -->
+	</modules>
+	<modules name="travelTimeCalculator" >
+		<!-- (only for backwards compatibility; only used if separateModes==false && + filterModes==true)  Transport modes that will be respected by the travel time collector. 'car' is default which includes also buses from the pt simulation modules. -->
 		<param name="analyzedModes" value="car" />
 		<param name="calculateLinkToLinkTravelTimes" value="false" />
 		<param name="calculateLinkTravelTimes" value="true" />
@@ -757,11 +757,11 @@
 		<param name="travelTimeCalculator" value="TravelTimeCalculatorArray" />
 		<!-- How to deal with link entry times at different positions during the time bin. Currently supported: average, linearinterpolation -->
 		<param name="travelTimeGetter" value="average" />
-	</module>
-	<module name="vehicles" >
+	</modules>
+	<modules name="vehicles" >
 		<param name="vehiclesFile" value="null" />
-	</module>
-	<module name="vspExperimental" >
+	</modules>
+	<modules name="vspExperimental" >
 		<!-- (do not use except of you have to) There was a problem with pt interaction scoring.  Some people solved it by overwriting the parameters of the pt interaction activity type.  Doing this now throws an Exception.  If you still insist on doing this, set the following to true. -->
 		<param name="isAbleToOverwritePtInteractionParams" value="false" />
 		<param name="isGeneratingBoardingDeniedEvent" value="false" />
@@ -772,7 +772,7 @@
 		<param name="vspDefaultsCheckingLevel" value="ignore" />
 		<!-- if true then writes output_events in output directory.  default is `false'. Will only work when lastIteration is multiple of events writing interval -->
 		<param name="writingOutputEvents" value="true" />
-	</module>
+	</modules>
 
 </config>
 

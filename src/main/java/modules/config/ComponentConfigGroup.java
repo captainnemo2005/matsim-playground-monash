@@ -1,4 +1,4 @@
-package module.config;
+package modules.config;
 
 import org.matsim.core.config.ReflectiveConfigGroup;
 

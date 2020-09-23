@@ -1,6 +1,7 @@
-package module;
+package modules;
 
 import com.google.inject.Inject;
+import modules.config.DiscreteModeChoiceConfigGroup;
 import org.matsim.core.controler.AbstractModule;
 
 public class DiscreteModeChoiceModule extends AbstractModule {
