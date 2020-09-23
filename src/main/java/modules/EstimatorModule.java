@@ -7,6 +7,7 @@ import components.estimators.*;
 import components.utils.NullWaitingTimeEstimator;
 import components.utils.PTWaitingTimeEstimator;
 import components.utils.ScheduleWaitingTimeEstimatorModule;
+import model.estimation.CachedTripEstimator;
 import model.tour_based.TourEstimator;
 import model.trip_based.TripEstimator;
 import modules.config.DiscreteModeChoiceConfigGroup;
