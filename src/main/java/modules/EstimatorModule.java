@@ -1,5 +1,6 @@
 package modules;
 
+import components.estimators.MATSimTripScoringEstimator;
 import org.matsim.pt.config.TransitConfigGroup;
 
 import java.util.Arrays;

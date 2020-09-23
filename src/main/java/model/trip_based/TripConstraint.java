@@ -1,5 +1,8 @@
 package model.trip_based;
 
+import model.DiscreteModeChoiceTrip;
+import model.trip_based.candidates.TripCandidate;
+
 import java.util.List;
 
 public interface TripConstraint {

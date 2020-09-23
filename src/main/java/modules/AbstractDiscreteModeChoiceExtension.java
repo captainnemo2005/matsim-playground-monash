@@ -2,6 +2,9 @@ package modules;
 
 import com.google.inject.binder.LinkedBindingBuilder;
 import com.google.inject.multibindings.MapBinder;
+import model.trip_based.TripConstraintFactory;
+import model.trip_based.TripEstimator;
+import modules.model_availability.ModeAvailability;
 import org.matsim.core.controler.AbstractModule;
 
 public abstract class AbstractDiscreteModeChoiceExtension extends AbstractModule {
