@@ -1,22 +1,24 @@
 package LearningWithGoogleCom.PlayingWithDIntoProvider;
 
 import com.google.inject.AbstractModule;
+import com.google.inject.binder.LinkedBindingBuilder;
 import com.google.inject.multibindings.MapBinder;
 
-public class DiscountGuiceModule extends AbstractModule {
+public abstract class CheckoutExtension extends AbstractModule {
+
+    private MapBinder<Integer,Discountable> DiscountMapBinder;
 
     @Override
     protected void configure() {
-        MapBinder<Integer,Discountable> mapBinder = MapBinder.newMapBinder(binder(),
-                                                Integer.class,
-                                                Discountable.class);
-        mapBinder.addBinding(0).to(BigDiscount.class);
-        mapBinder.addBinding(1).to(SmallDiscount.class);
-        mapBinder.addBinding(2).to(NoDiscount.class);
-
-        //bind(Random.class).toInstance(new Random());
-
-        bind(Discountable.class).toProvider(DiscountableProvider.class);
+        DiscountMapBinder = MapBinder.newMapBinder(binder(), Integer.class, Discountable.class);
+        installExtension();
+    }
+    /**/
+    public void  bindDiscountMapBinder(){
+         DiscountMapBinder.addBinding(0).to(BigDiscount.class);
+         DiscountMapBinder.addBinding(1).to(SmallDiscount.class);
+         DiscountMapBinder.addBinding(2).to(NoDiscount.class);
     }
 
+    public abstract void installExtension();
 }
